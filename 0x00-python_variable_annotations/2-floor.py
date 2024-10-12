@@ -5,5 +5,6 @@
 def floor(n: float) -> int:
     ''' function takes in a float and returns an int '''
     import math
+    ''' imports the math module '''
     return math.floor(n)
 
