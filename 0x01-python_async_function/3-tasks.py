@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """This module defines the function `task_wait_random`"""
+
 import asyncio
-import random
+
 
 wait_random = __import__('0-basic_async_syntax').wait_random
 
