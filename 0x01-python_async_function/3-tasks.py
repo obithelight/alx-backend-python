@@ -2,6 +2,7 @@
 ''' A Python3 Module '''
 
 import asyncio
+import random
 
 
 wait_random = __import__("0-basic_async_syntax").wait_random
