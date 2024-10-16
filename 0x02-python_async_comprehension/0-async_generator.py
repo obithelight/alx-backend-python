@@ -6,7 +6,7 @@ import random
 from typing import Generator
 
 
-async def async_generator() -> Generator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     '''
     Loops 10 times asynchronously and yields a random number between 0 and 10
     '''
