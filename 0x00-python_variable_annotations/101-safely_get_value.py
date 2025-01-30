@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-''' A Python3 Module '''
-from typing import Mapping, TypeVar, Any, Union
+"""Defines a function called `safely_get_value`"""
+from typing import TypeVar, Mapping, Any, Union, Optional
+
+T = TypeVar('T')
 
 
-K = TypeVar("K")  # Key Type (Can be Any)
-V = TypeVar("V")  # Value Type (Maintains consistency)
-
-def safely_get_value(dct: Mapping[K, V], key: K, default: Union[V, None] = None) -> Union[V, None]:
+def safely_get_value(dct: Mapping, key: Any,
+                     default: Union[T, None] = None) -> Union[Any, T]:
+    """Safely retrieves a value from a dictionary or returns the default value
+    if the key is not present
+    """
     if key in dct:
         return dct[key]
     else:
